@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                method : "GET",
+                url : "https://restcountries.eu/rest/v2/all",
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+        </script>
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                method : "GET",
+                url : "https://www.w3schools.com/angular/customers.php",
+                success : (posRes)=>{
+                    let obj = JSON.parse(posRes);
+                    console.log(obj);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+        </script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                method  : "POST",
+                data : {'message':'angular8'},
+                url : "http://test-routes.herokuapp.com/test/uppercase",
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            });
+        </script>
+    </body>
+</html>
