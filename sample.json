@@ -1,0 +1,20 @@
+{
+	"products" : [{
+		"p_id" : 111,
+		"p_name" : "P_one",
+		"p_cost" : 10000
+	}],
+
+	"employees" : [
+		{
+			"e_id" : 111,
+			"e_name" : "E_one",
+			"e_sal" : 10000
+		},
+		{
+			"e_id" : 222,
+			"e_name" : "E_two",
+			"e_sal" : 20000
+		}
+	]
+}
