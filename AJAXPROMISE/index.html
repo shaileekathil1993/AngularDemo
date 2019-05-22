@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    </head>
+    <body>
+        <script>
+            function myFun(){
+                return new Promise((resolve,reject)=>{
+                    $.ajax({
+                        method : "GET",
+                        url : "http://localhost:3000/products",
+                        success : (posRes)=>{
+                            resolve(posRes);
+                        },
+                        error : (errRes)=>{
+                            reject(errRes);
+                        }
+                    });
+                });
+            };
+            async function consumeFun(){
+                let result = await myFun();
+                console.log(result);
+            }
+            consumeFun();
+        </script>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    </head>
+    <body>
+        <script>
+            function myFun(){
+                return new Promise((resolve,reject)=>{
+                    $.ajax({
+                        method : "GET",
+                        url : "http://localhost:3000/products",
+                        success : (posRes)=>{
+                            resolve(posRes);
+                            $.ajax({
+                                method : "GET",
+                                url : "http://localhost:3000/employees",
+                                success : (posRes)=>{
+                                    console.log(posRes);
+                                },
+                                error : (errRes)=>{
+                                    console.log(errRes);
+                                }
+                            });
+                        },
+                        error : (errRes)=>{
+                            reject(errRes);
+                        }
+                    });
+                });
+            }
+            async function consumeFun(){
+                let result = await myFun();
+                console.log(result);
+            }
+            consumeFun();
+        </script>
+    </body>
+</html>
